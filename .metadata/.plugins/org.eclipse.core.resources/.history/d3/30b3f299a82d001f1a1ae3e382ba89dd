@@ -62,7 +62,7 @@ public class Principal {
 		
 		
 		//Imprimir total dos salarios dos funcionarios
-		totalSalarios();
+		totalDosSalarios();
 		
 		
 		
@@ -266,7 +266,7 @@ public class Principal {
     	        
         JOptionPane.showMessageDialog(null, "\nLista por ordem alfabética:");
         
-        Collections.sort(funcionarios, new OrdemAlfabetica());
+        Collections.sort(funcionarios, new CompararOrdemAlfabetica());
         
         for (Funcionario f: funcionarios) {
         	
@@ -277,7 +277,7 @@ public class Principal {
     }
     
     
-    public static void totalSalarios() {
+    public static void totalDosSalarios() {
     	
         BigDecimal soma = BigDecimal.valueOf(0);
         
@@ -302,8 +302,8 @@ public class Principal {
         	
             String nome = f.getNome();
             BigDecimal salario = f.getSalario();
-            BigDecimal salarioMinimo = new BigDecimal(1212.00);
-            BigDecimal resultado = salario.divide(salarioMinimo, 2, RoundingMode.HALF_UP);
+            BigDecimal minimo = new BigDecimal(1212.00);
+            BigDecimal resultado = salario.divide(minimo, 2, RoundingMode.HALF_UP);
             String valor = resultado.toString().replace(".", ",");
             
             JOptionPane.showMessageDialog(null, nome + " ganha " + valor + " salários mínimos.");

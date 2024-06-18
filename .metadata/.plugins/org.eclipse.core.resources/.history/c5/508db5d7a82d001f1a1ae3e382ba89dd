@@ -62,7 +62,7 @@ public class Principal {
 		
 		
 		//Imprimir total dos salarios dos funcionarios
-		totalSalarios();
+		totalDosSalarios();
 		
 		
 		

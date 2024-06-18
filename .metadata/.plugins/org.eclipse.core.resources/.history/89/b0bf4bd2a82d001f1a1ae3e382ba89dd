@@ -62,7 +62,7 @@ public class Principal {
 		
 		
 		//Imprimir total dos salarios dos funcionarios
-		totalSalarios();
+		totalDosSalarios();
 		
 		
 		
@@ -277,7 +277,7 @@ public class Principal {
     }
     
     
-    public static void totalSalarios() {
+    public static void totalDosSalarios() {
     	
         BigDecimal soma = BigDecimal.valueOf(0);
         
